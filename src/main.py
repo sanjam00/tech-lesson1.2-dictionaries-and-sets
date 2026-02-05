@@ -12,8 +12,12 @@ customer_manager = CustomerManager(customers)
 print("\nAll Customers:")
 customer_manager.display_customers()
 
-# Filtering is not yet implemented (students will add it)
-print("\nFiltered Customers: (Not Implemented Yet)")
+customer_manager.filter_customers_by_city("New York")
 
 # Unique locations are not yet implemented (students will add them)
-print("\nUnique Locations: (Not Implemented Yet)")
+# print("\nUnique Locations: (Not Implemented Yet)")
+
+customer_manager.update_customer_location("cust_102", "San Francisco")
+
+customer_locations = {customer["location"] for customer in customers.values()}
+print("\nUpdated Unique Locations:", customer_locations)
